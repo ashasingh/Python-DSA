@@ -41,17 +41,27 @@ def deleteNode(array, num):
     for i in range((len(array)//2)-1, -1, -1):
         heapify(array, len(array), i)
 
-## create array  
+## create empty array  
 arr = []
 
+# Insertion in Max-Heap
 insert(arr, 3)
 insert(arr, 4)
 insert(arr, 9)
 insert(arr, 5)
 insert(arr, 2)
-
 print ("Max-Heap array: " + str(arr))
 
 # delete item from array
 deleteNode(arr, 4)
 print("After deleting an element: " + str(arr))
+
+# get the max element
+print("Peek of maximum element: " + str(arr[0]))
+
+# Extract max - get the max element from array and delete from the array
+print("Extract Max: " + str(arr[0]))
+deleteNode(arr, arr[0])
+print ("Max-Heap array: " + str(arr))
+
+
